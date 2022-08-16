@@ -1,0 +1,24 @@
+diff b/w header and h1 tag
+
+Header Tag
+
+* The <header> tag in HTML is used to define the header for a document or a section.
+
+* The header tag contains information related to the title and heading of the related content.
+* The <header> element is intended to usually contain the section’s heading (an h1-h6 element or an <hgroup> element), 
+  but this is not required.
+* The <header> element can also be used to wrap a section’s table of contents, a search form, or any relevant logos.
+* The <header> tag is a new tag in HTML5 and it requires a starting tag as well as an end tag.
+* There can be several <header> elements in one document.
+* A <header> tag cannot be placed within a <footer>, <address> or another <header> element.
+
+
+H1 Tag
+
+These six heading elements are H1, H2, H3, H4, H5, and H6; with H1 being the highest level and H6 the least.
+
+Importance of Heading :
+
+1. Search Engines use headings for indexing the structure and content of the webpage.
+2. Headings are used for highlighting important topics.
+3. They provide valuable information and tell us about the structure of the document

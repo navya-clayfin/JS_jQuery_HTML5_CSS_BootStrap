@@ -1,0 +1,14 @@
+NEW FEATURES OF HTML5
+
+1. Intro of audio and video tags
+2. Nav tag
+3. Progress tag
+4. Placeholder Attribute
+5. Email attribute
+6. Header and Footer
+7. Storage
+8. Figure and figcaption
+9. Section tag
+10. Canvas Tag
+11. Mark element
+12. Main tag

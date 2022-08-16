@@ -1,0 +1,32 @@
+LOCAL STORAGE
+The main features of localStorage are:
+
+1. Shared between all tabs and windows from the same origin.
+2. The data does not expire. It remains after the browser restart and even OS reboot.
+
+Methods:
+1. setItem(key, value) – store key/value pair.
+2. getItem(key) – get the value by key.
+3. removeItem(key) – remove the key with its value.
+4. clear() – delete everything.
+5. key(index) – get the key on a given position.
+6. length – the number of stored items.
+
+Example:
+localStorage.setItem('test', 1);
+alert( localStorage.getItem('test') );
+
+SESSION STORAGE
+The sessionStorage object is used much less often than localStorage.
+1. The sessionStorage exists only within the current browser tab.
+	* Another tab with the same page will have a different storage.
+	* But it is shared between iframes in the same tab (assuming they come from the 
+	  same origin).
+2. The data survives page refresh, but not closing/opening the tab.
+
+Properties:
+1. key – the key that was changed (null if .clear() is called).
+2. oldValue – the old value (null if the key is newly added).
+3. newValue – the new value (null if the key is removed).
+4. url – the url of the document where the update happened.
+5. storageArea – either localStorage or sessionStorage object where the update happened.

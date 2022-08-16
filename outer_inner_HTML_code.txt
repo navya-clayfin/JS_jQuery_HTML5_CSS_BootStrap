@@ -1,0 +1,9 @@
+<!doctype html>
+<body>
+<div id="elem">Hello <b><i style ="color :red">World</b></i></div>
+
+<script>
+  alert(elem.outerHTML); // <div id="elem">Hello <b>World</b></div>
+  alert(elem.innerHTML);
+</script>
+</body>

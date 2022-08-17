@@ -1,0 +1,9 @@
+Disadvantages of CSS
+
+1. Confusion due to many CSS levels
+
+2. Cross-Browser Issues
+
+3. Security Issues
+
+4. Extra Work for Developers

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Inline CSS</title>
+	</head>
+	
+	<body>
+		<p style = "color : #FF00FF ; font-size:50px;
+				font-style:italic; text-align:center;">
+			Welcome to <span style = "color : #00FF00 ; "</span> CLAYFIN 
+		</p>
+
+	</body>
+</html>		

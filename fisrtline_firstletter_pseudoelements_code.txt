@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+pre::first-letter {
+  color: #ff0000;
+  font-variant: small-caps;
+  font-size: 20px;
+}
+pre::first-line {
+  color: violet;
+  font-variant: small-caps;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+<span style="white-space: pre-line"></span>
+<pre>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. 
+Some more text. And even more, and more, and more, and more, and more, and more,
+and more, and more, and more, and more, and more, and more.</pre>
+
+</body>
+</html>
+
+

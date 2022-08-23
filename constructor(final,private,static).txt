@@ -1,0 +1,25 @@
+STATIC CONSTRUCTOR:::
+When we try to create a static constructor then we get an exception as follows::
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	Illegal modifier for the constructor in type StaticConstructorDemo; only public, protected & private are permitted.
+
+
+PRIVATE CONSTRUCTOR:::
+we can declare a constructor as private. If we declare a constructor as private we are not able to create an object of
+a class. We can use this private constructor in the Singleton Design Pattern.
+CONDITIONS FOR PRIVATE CONSTRUCTOR::
+1. A private constructor does not allow a class to be subclassed.
+2. A private constructor does not allow to create an object outside the class.
+3. If all the constant methods are there in our class we can use a private constructor.
+4. If all the methods are static then we can use a private constructor.
+5. If we try to extend a class which is having private constructor compile time error will occur.
+
+FINAL CONSTRUCTOR:::
+No, a constructor can’t be made final.
+
+A final method cannot be overridden by any subclasses. The final modifier prevents a method from being modified in 
+ a subclass.
+
+The main intention of making a method final would be that the content of the method should not be changed by any outsider.
+When we try to create a final constructor then we get an exception as follows::
+Exception in thread "main" java.lang.Error: Unresolved compilation problems

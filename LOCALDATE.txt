@@ -1,0 +1,33 @@
+package com.clayfin;
+
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+public class LocalDateCheck {
+
+	public static void main(String[] args) {
+		LocalDate localdate = LocalDate.parse("2024-08-23");
+		LocalDate localdate1 = LocalDate.of(2022, 8, 23);
+		LocalDate localdate2 = LocalDate.of(2023, 8, 19);
+		
+		System.out.println(localdate);
+		System.out.println(localdate1);
+		System.out.println(localdate2);
+		System.out.println(localdate.getDayOfMonth());
+		System.out.println(localdate.getDayOfWeek());
+		System.out.println(localdate.getDayOfYear());
+		System.out.println(localdate.getMonth());
+		System.out.println(localdate.getMonthValue());
+		System.out.println(localdate.getYear());
+		System.out.println(localdate.isAfter(localdate1));
+		System.out.println(localdate.isBefore(localdate1));
+		System.out.println(localdate.isEqual(localdate1));
+		System.out.println(localdate.isLeapYear());
+		
+		System.out.println(localdate.plus(10, ChronoUnit.WEEKS));
+		System.out.println(localdate1.plusDays(10));
+		System.out.println(localdate1.plusYears(10));
+		System.out.println(localdate1.plusMonths(10));
+	}
+
+}

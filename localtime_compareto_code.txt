@@ -1,0 +1,23 @@
+package com.clayfin;
+
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+
+public class LocalDateTimeCheck {
+
+	public static void main(String[] args) {
+		LocalTime ldt=LocalTime.parse("12:36:10");
+		LocalTime ldt1=LocalTime.parse("12:35:10");
+		
+		int a = ldt.compareTo(ldt1);
+		System.out.println(a);
+		if(a==0)
+			System.out.println("The two times are equal");
+		else if(a==1)
+			System.out.println("ldt is greater than ldt1");
+		else
+			System.out.println("ldt is less than ldt1");
+		
+	}
+
+}

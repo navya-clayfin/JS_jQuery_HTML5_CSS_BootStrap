@@ -1,0 +1,17 @@
+package com.clayfin;
+
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+
+public class LocalDateTimeCheck {
+
+	public static void main(String[] args) {
+		LocalTime ldt=LocalTime.parse("12:36:10");
+		LocalTime ldt1=LocalTime.parse("12:35:10");
+		
+		LocalTime a1=ldt.truncatedTo(ChronoUnit.HOURS);
+
+		System.out.println(a1);
+	}
+
+}

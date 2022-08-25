@@ -1,0 +1,30 @@
+package com.clayfin;
+
+public class Employee111 {
+	
+	public static int count;
+	public Employee111() {
+		count++;
+	}
+
+	public static void main(String[] args) {
+		
+		Employee111 emp111=new Employee111();
+		Employee111 emp112=new Employee111();
+		
+		Admin admin=new Admin();
+		Admin admin1=new Admin();
+		
+		Manager manager = new Manager();
+		Manager manager1 = new Manager();
+		System.out.println(count);
+	}
+
+}
+
+class Admin extends Employee111{
+
+}
+class Manager extends Employee111{
+
+}

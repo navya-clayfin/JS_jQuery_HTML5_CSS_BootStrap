@@ -1,0 +1,24 @@
+package com.clayfin;
+
+import java.util.Scanner;
+
+public class Paragraph_count1 {
+
+	public static void main(String[] args) {
+		Scanner scn= new Scanner(System.in);
+		int count =0;
+		String str = "The yellow fog that rubs its back upon the window-panes, The yellow smoke that rubs its muzzle on the window-panes";
+		String str1[] = str.split(" ");
+
+		System.out.println("Please enter a string: ");
+		String str2 = scn.next();
+		for(int a=0;a<str1.length;a++) {
+			if(str2.equals(str1[a])) {
+				count++;
+			}
+		}
+		System.out.println(count);
+
+	}
+
+}

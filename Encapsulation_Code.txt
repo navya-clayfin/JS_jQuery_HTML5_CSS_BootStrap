@@ -1,0 +1,82 @@
+package com.clayfin1;
+
+public class Employee {
+	private String name;
+	private String comp;
+	private int emp_id;
+	private double bank_bal;
+	private boolean loan_eligible;
+
+	public double getBank_bal() {
+		return bank_bal;
+	}
+
+	public void setBank_bal(double bank_bal) {
+		this.bank_bal = bank_bal;
+	}
+
+	public boolean isLoan_eligible() {
+		return loan_eligible;
+	}
+
+	public void setLoan_eligible(boolean loan_eligible) {
+		this.loan_eligible = loan_eligible;
+	}
+
+	public String getComp() {
+		return comp;
+	}
+
+	public void setComp(String comp) {
+		this.comp = comp;
+	}
+
+	public int getEmp_id() {
+		return emp_id;
+	}
+
+	public void setEmp_id(int emp_id) {
+		this.emp_id = emp_id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+}
+
+
+package com.clayfin1;
+
+import java.util.Scanner;
+
+public class FetchData {
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		Employee emp = new Employee();
+		System.out.println("please set the employee name: ");
+		emp.setName(scn.next());
+		
+		System.out.println("Please enter the company "+emp.getName()+" is working in: ");
+		emp.setComp(scn.next());
+		System.out.println("The id of the "+emp.getName()+" is: ");
+		emp.setEmp_id(scn.nextInt());
+		System.out.println("Bank balance of "+emp.getName()+" is: ");
+		emp.setBank_bal(scn.nextDouble());
+		System.out.println("please select whether the employee is eligible for loan or not: ");
+		emp.setLoan_eligible(scn.nextBoolean());
+		
+		System.out.println("Name of the employee is: "+emp.getName());
+		System.out.println("Company working in is: "+emp.getComp());
+		System.out.println("ID of the employee is: "+emp.getEmp_id());
+		System.out.println("The bank balance of the employee to check for the loan eligibility is: "+emp.getBank_bal());
+		if(emp.isLoan_eligible()==true)
+			System.out.println(emp.getName()+" is eligible for loan");
+		else
+			System.out.println(emp.getName()+" is not eligible for loan");
+	}
+}

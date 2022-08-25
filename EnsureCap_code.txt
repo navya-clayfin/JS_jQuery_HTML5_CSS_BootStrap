@@ -1,0 +1,25 @@
+package com.clayfin;
+
+import java.util.*;
+
+public class EnsureCapacity {
+  public static void main(String[] args) {
+ 
+   
+      ArrayList<String> StudentList = new ArrayList<String>(4);
+      
+       StudentList.add("David");
+       StudentList.add("Tom");
+       StudentList.add("Rohit");
+       StudentList.add("Paul");
+      
+      StudentList.ensureCapacity(10);
+
+      StudentList.add("Vishal");
+      
+      for (String s: StudentList) {
+            System.out.println(s);
+      }
+      
+   }
+}

@@ -1,0 +1,54 @@
+package com.clayfin;
+
+public class Audio_Video {
+	
+	void power()
+	{
+		 System.out.println("Switch ON the device");
+	}
+	void audio() 
+	{
+		System.out.println("Play the audio");
+	}
+	
+	public static void main(String[] args) 
+	{
+		Television tv=new Television();
+		DVD dvd=new DVD();
+		Radio radio=new Radio();
+		tv.power();
+		tv.audio();
+		tv.signal();
+		System.out.println();
+		
+		dvd.power();
+		dvd.audio();
+		dvd.data();
+		System.out.println();
+		
+		radio.power();
+		radio.audio();
+		radio.antena();
+	}
+}
+class Television extends Audio_Video
+{
+	void signal()
+	{
+		System.out.println("Frequency of the signal chnages");
+	}
+}
+class DVD extends Audio_Video
+{
+	void data()
+	{
+		System.out.println("fetch data from disk");
+	}
+}
+class Radio extends Audio_Video
+{
+	void antena()
+	{
+		System.out.println("antena is used to get the signal");
+	}
+}

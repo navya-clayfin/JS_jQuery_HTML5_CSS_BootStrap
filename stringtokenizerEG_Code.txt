@@ -1,0 +1,25 @@
+package com.clayfin;
+import java.util.StringTokenizer;
+
+public class StringTokenizerEg {
+	
+	public static void main(String[] args) {
+			StringTokenizer st=new StringTokenizer("hi 45 45.6");
+			while(st.hasMoreElements())
+			{
+				//String data=st.nextToken();
+				Object o=st.nextElement();
+				if(o instanceof Integer) {
+				int n1=Integer.parseInt(st.nextToken());
+				System.out.println(n1);
+				}
+				else if(o instanceof String)
+				{
+					String n1 = (String) o;
+					System.out.println(n1);
+				}
+				
+			}
+	}
+
+}

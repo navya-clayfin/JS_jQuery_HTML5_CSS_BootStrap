@@ -1,0 +1,27 @@
+package com.clayfin;
+
+class StaticFactoryMethod
+{
+	String x;
+	long y;
+	private StaticFactoryMethod() {
+		x="Java";
+		y=9494949494L;
+	}
+	public static StaticFactoryMethod factory()
+	{
+		return new StaticFactoryMethod();
+	}
+
+
+}
+public class ProgramSampleFact
+{
+	public static void main(String[] args)
+	{
+		StaticFactoryMethod staticfact=StaticFactoryMethod.factory();
+		System.out.println(staticfact.x);
+		System.out.println(staticfact.y);
+		
+	}
+}

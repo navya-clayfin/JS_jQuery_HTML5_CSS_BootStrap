@@ -1,0 +1,26 @@
+package com.clayfin;
+
+public class CustomExceptionCode {
+	static void trigger(int a) throws CustomeException{
+		if(a%2==0&&a%5==0) {
+			CustomeException ex = new CustomeException();
+			throw ex;
+		}
+	}
+
+	public static void main(String[] args) {
+		try {
+			trigger(12);
+			trigger(15);
+			trigger(20);
+			
+		}catch (CustomeException e) {
+			System.out.println("here is the exception occur's");
+		}
+
+	}
+
+}
+class CustomeException extends Exception{
+	
+}

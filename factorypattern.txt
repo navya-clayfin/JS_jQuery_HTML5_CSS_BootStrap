@@ -1,0 +1,60 @@
+package com.clayfin;
+
+public class FactroyPattern {
+	public static void main(String[] args) 
+	{
+		FactoryMethdod fm= new FactoryMethdod();
+		OS obj=fm.factoryCalculaion("mac");
+		obj.operatingSystem();
+	}
+}
+
+package com.clayfin;
+
+public class FactoryMethdod {
+	public OS factoryCalculaion(String str)
+	{
+		if(str.equals("window"))
+			return new Windows();
+		else if(str.equals("linux"))
+			return new Linux();
+		else if(str.equals("mac"))
+			return new Mac();
+		else
+			return null ;
+	}
+}
+
+package com.clayfin;
+
+public interface OS {
+	public void operatingSystem();
+}
+
+package com.clayfin;
+
+public class Windows implements OS{
+	@Override
+	public void operatingSystem() {
+		System.out.println("This is an windows operating system");
+		
+	}
+}
+
+package com.clayfin;
+
+public class Linux implements OS{
+	public void operatingSystem()
+	{
+		System.out.println("Compate to window, linux is faster");
+	}
+}
+
+package com.clayfin;
+
+public class Mac implements OS{
+	public void operatingSystem()
+	{
+		System.out.println("This is only using in apple laptop");
+	}
+}

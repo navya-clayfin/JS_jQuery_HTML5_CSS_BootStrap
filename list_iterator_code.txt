@@ -1,0 +1,44 @@
+package com.clayfin;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+
+public class ListIteratorCode {
+
+	public static void main(String[] args) {
+		List list = new ArrayList();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(1);
+		list.add(4);
+		list.add(5);
+		list.add(null);
+		
+		ListIterator<Integer> listIterator = list.listIterator();
+		listIterator.next();
+		listIterator.next();
+		listIterator.next();
+		
+		int num = listIterator.next();
+		System.out.println("Next Element: "+num);
+		
+		int num1 = listIterator.previous();
+		System.out.println("Previous Element: "+num1);
+		
+		int index1 = listIterator.nextIndex();
+        System.out.println("Position of Next Element: " + index1);
+        
+        int preindex = listIterator.previousIndex();
+        System.out.println("Position of previous Element: " + preindex);
+
+        
+        System.out.println("Is there any next element? " + listIterator.hasNext());
+        
+        System.out.println("Is there any next element? " + listIterator.hasPrevious());
+    
+
+	}
+
+}

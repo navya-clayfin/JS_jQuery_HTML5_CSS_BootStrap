@@ -1,0 +1,93 @@
+package com.clayfin.la.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Scanner;
+
+import com.clayfin.la.model.Theater;
+import com.clayfin.la.repository.ITheaterDao;
+import com.clayfin.la.repository.TheaterDaoImpl;
+import com.clayfin.la.ui.LayeredArchCode;
+
+public class TheaterServiceImpl implements ITheaterService{
+	
+	static List<Theater> tList=new ArrayList<Theater>();
+	Scanner scn = new Scanner(System.in);
+
+	@Override
+	public int addTheater(Theater theater) {
+//		System.out.println("in dao -> "+theater);
+//		//tList.addAll(theater);
+//		tList.add(theater);
+//		System.out.println(tList);
+		
+		theater.setTid(generateId());
+		tList.add(theater);
+		
+		return 0;
+	}
+
+	private int generateId() {
+		return(int)(Math.random()*1000);
+		
+	}
+
+	@Override
+	public int deleteTheater(int tid) {
+		System.out.println("Please enter the id::: ");
+		int id = scn.nextInt();
+		for(int i=0;i<tList.size();i++) {
+			if(tList.get(i).getTid()==id) {
+				tList.remove(i);
+				System.out.println("The list is deleted");
+				
+			}
+		}
+		return 0;
+	}
+
+	@Override
+	public int updateTheater(int tid) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	@Override
+	public int displayList(int tid) {
+		if(tList!=null) {
+		for(int i=0;i<tList.size();i++) {
+			System.out.println(tList.get(i));
+		}
+		
+	}
+		else 
+		{
+			System.out.println("List is empty");
+		}
+		return 0;
+	}
+	
+
+	@Override
+	public Theater getByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Theater getByName(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public HashMap<Integer, Theater> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+	
+}

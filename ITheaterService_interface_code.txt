@@ -1,0 +1,17 @@
+package com.clayfin.la.service;
+
+import java.util.HashMap;
+
+import com.clayfin.la.model.Theater;
+import com.clayfin.la.ui.LayeredArchCode;
+
+public interface ITheaterService {
+	public abstract int addTheater(Theater theater);
+	public abstract int deleteTheater(int tid);
+	public abstract int updateTheater(int tid);
+	public abstract int displayList(int tid);
+	public abstract Theater getByName(String name);
+	public abstract Theater getByName(int id);
+	public abstract HashMap<Integer,Theater> getAll();
+	
+}

@@ -1,0 +1,101 @@
+package com.clayfin.la.ui;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Scanner;
+
+import com.clayfin.la.model.Theater;
+import com.clayfin.la.service.ITheaterService;
+import com.clayfin.la.service.TheaterServiceImpl;
+
+public class LayeredArchCode implements Serializable{
+	static Scanner scn = new Scanner(System.in);
+	public static void main(String[] args) throws Exception {
+		
+		System.out.println("Theater Management System");
+		
+		ITheaterService ITheater = new TheaterServiceImpl();
+		while(true) {
+			System.out.println("1. AddTheater\n2. UpdateTheater \n3. DeleteTheater \n4. DisplayTheater\n5.GetTheaterName\n6.GetTheaterId\n7.exit");
+			System.out.println("Enter your choice");
+			int action=scn.nextInt();
+			switch (action) {
+			case 1:getInput();
+				break;
+//			case 2:	updateTheater(0);
+//				break;
+			case 3:deleteTheater();
+				break;
+			case 4:displayList();
+				break;
+			
+			default:
+				System.exit(10);
+			}
+		}
+		
+	}
+	
+	private static void getInput() throws IOException, Exception {
+		System.out.println("Enter the Name");
+		String name=scn.next();
+		
+		System.out.println("Enter the screens");
+		int scrn=scn.nextInt();
+		
+		System.out.println("Enter the location");
+		String loc=scn.next();
+		scn.nextLine();
+		
+		System.out.println("Enter the date and time, formate is YYYY-MONTH-DATE_T_HOUR:MINUIT:SECOND");
+		String datetime=scn.nextLine();
+		
+		LocalDateTime ldt=LocalDateTime.parse(datetime);
+		
+		Theater movie= new Theater(name,scrn,loc,ldt);
+		
+		ITheaterService ITheater = new TheaterServiceImpl();
+		ITheater.addTheater(movie);
+		
+		FileOutputStream fos=new FileOutputStream("temple1.txt");
+		ObjectOutputStream oos=new ObjectOutputStream(fos);
+		oos.writeObject(movie);
+		fos.close();
+		oos.close();
+		
+		FileInputStream fis=new FileInputStream("temple1.txt");
+		ObjectInputStream ois=new ObjectInputStream(fis);
+		Theater t=(Theater)ois.readObject();
+		System.out.println(t);
+		
+	}
+	private static int deleteTheater() {
+		ITheaterService ITheater = new TheaterServiceImpl();
+		ITheater.deleteTheater(10);
+		return 0;
+		
+	}
+	private static int displayList() {
+		
+		ITheaterService ITheater = new TheaterServiceImpl();
+		ITheater.displayList(10);
+		return 0;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}

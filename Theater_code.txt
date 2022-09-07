@@ -1,0 +1,71 @@
+package com.clayfin.la.model;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+public class Theater implements Serializable{
+	private int tid;
+	private String name;
+	private int screens;
+	private String location;
+	private LocalDateTime mdate;
+	
+	public Theater() {
+		
+	}
+	
+	@Override
+	public String toString() {
+		return "Theater [tid=" + tid + ", name=" + name + ", screens=" + screens + ", location=" + location + ", mdate="
+				+ mdate + "]";
+	}
+
+	public Theater(int tid, String name, int screens, String location, LocalDateTime mdate) {
+		super();
+		this.tid = tid;
+		this.name = name;
+		this.screens = screens;
+		this.location = location;
+		this.mdate = mdate;
+	}
+	public Theater(String name, int screens, String location, LocalDateTime mdate) {
+		super();
+		this.tid = tid;
+		this.name = name;
+		this.screens = screens;
+		this.location = location;
+		this.mdate = mdate;
+	}
+	public int getTid() {
+		return tid;
+	}
+	public void setTid(int tid) {
+		this.tid = tid;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getScreens() {
+		return screens;
+	}
+	public void setScreens(int screens) {
+		this.screens = screens;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public LocalDateTime getMdate() {
+		return mdate;
+	}
+	public void setMdate(LocalDateTime mdate) {
+		this.mdate = mdate;
+	}
+	
+	
+}
